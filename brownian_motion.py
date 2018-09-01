@@ -28,7 +28,7 @@ def brownianMotion(userID, startingX = 0, startingY = 0):
         currentX += xOffset
         currentY += yOffset
 
-        #sends data
+        #sends data to RESTful webservices
         sendData = {"X": currentX, "Y": currentY, "Z": 5, "Site":"1", "ID": userID}
         json_string = json.dumps(sendData)
         r2 = requests.post("URL goes here...", json_string)
