@@ -31,7 +31,7 @@ def brownianMotion(userID, startingX = 0, startingY = 0):
         #sends data
         sendData = {"X": currentX, "Y": currentY, "Z": 5, "Site":"1", "ID": userID}
         json_string = json.dumps(sendData)
-        r2 = requests.post("http://marconi.sdsu.edu:8080/GeoLocation/resources/ap", json_string)
+        r2 = requests.post("URL goes here...", json_string)
         pastebin_url = r2.text
         print("Data was posted for "+userID+"\n", end="")
 
